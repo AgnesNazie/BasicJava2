@@ -1,11 +1,14 @@
 package com.agnes.Binary;
 
 import java.awt.*;
+import java.time.DayOfWeek;
 import java.util.Scanner;
+
+import static java.lang.Math.tan;
 
 public class BinaryAddition {
     public static void main(String[] args) {
-        exe32();
+        exe34();
     }
 
     public static void exe17() {
@@ -364,12 +367,56 @@ Expected Output
 
         if (number1 != number2) {
             System.out.println(number1 + " != " + number2);
-        }  if (number1 < number2) {
+        }
+        if (number1 < number2) {
             System.out.println(number1 + " < " + number2);
 
-        } if(number1 <= number2) {
+        }
+        if (number1 <= number2) {
             System.out.println(number1 + " <= " + number2);
         }
         scanner.close();
+    }
+
+    public static void exe33() {
+        /*Write a Java program and compute the sum of an integer's digits.
+Input Data:
+Input an integer: 25
+Expected Output
+
+The sum of the digits is: 7
+         */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a digit");
+        int number = scanner.nextInt();
+        int sum = 0;
+        while (number != 0) {
+            sum += number % 10; // get the last digit
+            number /= 10;       // remove the last digit
+        }
+
+        System.out.println("The sum of the digits is: " + sum);
+
+        scanner.close();
+    }
+
+    public static void exe34() {
+        /*Write a Java program to compute hexagon area.
+Area of a hexagon = (6 * s^2)/(4*tan(π/6))
+where s is the length of a side
+Input Data:
+Input the length of a side of the hexagon: 6
+Expected Output
+
+The area of the hexagon is: 93.53074360871938
+         */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(" Enter the length of a side of the hexagon");
+        double hexLength = scanner.nextDouble();
+
+        double hexArea = (6 * Math.pow(hexLength, 2)) / (4 * Math.tan(Math.PI / 6));
+
+        System.out.println(hexArea);
+
     }
 }
