@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class BinaryAddition {
     public static void main(String[] args) {
-        exe26();
+        exe28();
     }
 
     public static void exe17() {
@@ -233,5 +233,44 @@ Equivalent binary number: 111
 
         scanner.close();
 
+    }
+    public static void exe27() {
+        /*Write a Java program to convert a octal number to a hexadecimal number.
+Input Data:
+Input a octal number : 100
+Expected Output
+
+Equivalent hexadecimal number: 40
+
+         */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter an octal number");
+        String octal = scanner.next();
+
+        //convert to integer
+        int number = Integer.parseInt(octal, 8);
+
+        //convert to hexadecimal
+        String hex = Integer.toHexString(number);
+        System.out.println("converted value:" + hex);
+         scanner.close();
+    }
+    public static void exe28() {
+        /*Write a Java program to convert a hexadecimal value into a decimal number.
+Input Data:
+Input a hexadecimal number: 25
+Expected Output
+
+Equivalent decimal number is: 37
+Click me to see the solution
+         */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a hexadecimal value");
+        String hexa = scanner.next();
+
+        int decimal = Integer.parseInt(hexa, 16);
+        System.out.println(decimal);
+
+        scanner.close();
     }
 }
