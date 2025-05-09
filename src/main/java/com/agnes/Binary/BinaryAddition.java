@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class BinaryAddition {
     public static void main(String[] args) {
-        exe24();
+        exe26();
     }
 
     public static void exe17() {
@@ -192,5 +192,46 @@ Octal number: 7
         System.out.println("Octal number " + octal);
 
         scanner.close();
+    }
+    public  static void exe25() {
+        /*Write a Java program to convert a octal number to a decimal number.
+Input Data:
+Input any octal number: 10
+Expected Output
+
+Equivalent decimal number: 8
+         */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter an octal number");
+        String octal = scanner.next();
+
+        // convert octal into decimal number
+        int decimal = Integer.parseInt(octal, 8);
+        System.out.println(decimal);
+
+        scanner.close();
+    }
+    public static void exe26() {
+        /*Write a Java program to convert a octal number to a binary number.
+Input Data:
+Input any octal number: 7
+Expected Output
+
+Equivalent binary number: 111
+         */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter  an octal number");
+        String octal = scanner.next();
+
+        //convert number to integer
+
+        int number = Integer.parseInt(octal, 8);
+
+        // convert integer into binary
+        String binary = Integer.toBinaryString(number);
+        System.out.println("Binary Value :" + binary);
+
+        scanner.close();
+
     }
 }
