@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class BinaryAddition {
     public static void main(String[] args) {
-        exe30();
+        exe32();
     }
 
     public static void exe17() {
@@ -130,7 +130,8 @@ Octal number is: 17
 
         scanner.close();
     }
-    public static  void exe22() {
+
+    public static void exe22() {
         /*Write a Java program to convert a binary number to a decimal number.
 Input Data:
 Input a binary number: 100
@@ -140,15 +141,16 @@ Decimal Number: 4
 
          */
         Scanner scanner = new Scanner(System.in);
-        System.out.println( "Enter a binary Number");
+        System.out.println("Enter a binary Number");
         String binary = scanner.next();
 
         //convert number into a decimal
-        int decimal = Integer.parseInt(binary,2);
+        int decimal = Integer.parseInt(binary, 2);
         System.out.println("Converted number " + decimal);
 
         scanner.close();
     }
+
     public static void exe23() {
         /*Write a Java program to convert a binary number to a hexadecimal number.
 Input Data:
@@ -171,7 +173,8 @@ HexaDecimal value: D
 
         scanner.close();
     }
-    public  static  void exe24() {
+
+    public static void exe24() {
         /*Write a Java program to convert a binary number to an octal number.
 Input Data:
 Input a Binary Number: 111
@@ -193,7 +196,8 @@ Octal number: 7
 
         scanner.close();
     }
-    public  static void exe25() {
+
+    public static void exe25() {
         /*Write a Java program to convert a octal number to a decimal number.
 Input Data:
 Input any octal number: 10
@@ -211,6 +215,7 @@ Equivalent decimal number: 8
 
         scanner.close();
     }
+
     public static void exe26() {
         /*Write a Java program to convert a octal number to a binary number.
 Input Data:
@@ -234,6 +239,7 @@ Equivalent binary number: 111
         scanner.close();
 
     }
+
     public static void exe27() {
         /*Write a Java program to convert a octal number to a hexadecimal number.
 Input Data:
@@ -253,8 +259,9 @@ Equivalent hexadecimal number: 40
         //convert to hexadecimal
         String hex = Integer.toHexString(number);
         System.out.println("converted value:" + hex);
-         scanner.close();
+        scanner.close();
     }
+
     public static void exe28() {
         /*Write a Java program to convert a hexadecimal value into a decimal number.
 Input Data:
@@ -273,7 +280,8 @@ Click me to see the solution
 
         scanner.close();
     }
-    public  static void exe29(){
+
+    public static void exe29() {
         /*Write a Java program to convert a hexadecimal number into a binary number.
 Input Data:
 Enter Hexadecimal Number : 37
@@ -294,7 +302,8 @@ Equivalent Binary Number is: 110111
 
         scanner.close();
     }
-    public  static void exe30() {
+
+    public static void exe30() {
         /*Write a Java program to convert a hexadecimal value into an octal number.
 Input Data:
 Input a hexadecimal number: 40
@@ -313,6 +322,54 @@ Equivalent of octal number is: 100
         String octal = Integer.toOctalString(number);
         System.out.println("Octal value " + octal);
 
+        scanner.close();
+    }
+
+    public static void exe31() {
+        /*Write a Java program to check whether Java is installed on your  computer.
+Expected Output
+
+Java Version: 1.8.0_71
+Java Runtime Version: 1.8.0_71-b15
+Java Home: /opt/jdk/jdk1.8.0_71/jre
+Java Vendor: Oracle Corporation
+Java Vendor URL: http://Java.oracle.com/
+Java Class Path:
+         */
+        System.out.println("Java Version: " + System.getProperty("java.version"));
+        System.out.println("Java Runtime Version: " + System.getProperty("java.runtime.version"));
+        System.out.println("Java Home: " + System.getProperty("java.home"));
+        System.out.println("Java Vendor: " + System.getProperty("java.vendor"));
+        System.out.println("Java Vendor URL: " + System.getProperty("java.vendor.url"));
+        System.out.println("Java Class Path: " + System.getProperty("java.class.path"));
+    }
+
+    public static void exe32() {
+        /*Write a Java program to compare two numbers.
+Input Data:
+Input first integer: 25
+Input second integer: 39
+Expected Output
+
+25 != 39
+25 < 39
+25 <= 39
+         */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number");
+        int number1 = scanner.nextInt();
+
+        System.out.println("Enter number 2 ");
+        int number2 = scanner.nextInt();
+
+        if (number1 != number2) {
+            System.out.println(number1 + " != " + number2);
+        }  if (number1 < number2) {
+            System.out.println(number1 + " < " + number2);
+
+        } if(number1 <= number2) {
+            System.out.println(number1 + " <= " + number2);
+        }
         scanner.close();
     }
 }
