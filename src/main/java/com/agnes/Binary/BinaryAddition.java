@@ -1,12 +1,11 @@
 package com.agnes.Binary;
 
+import java.awt.*;
 import java.util.Scanner;
 
 public class BinaryAddition {
     public static void main(String[] args) {
-        exe18();
-
-
+exe20();
     }
 
     public static void exe17() {
@@ -67,5 +66,46 @@ Product of two binary numbers: 110
 
         String binaryMult = Integer.toBinaryString(mult);
         System.out.println("Binary Multiplication :" + binaryMult);
+
+        scanner.close();
+    }
+    public static void exe19() {
+        /*Write a Java program to convert an integer number to a binary number.
+Input Data:
+Input a Decimal Number : 5
+Expected Output
+
+Binary number is: 101
+
+         */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter an integer number");
+        int number = scanner.nextInt();
+
+        //convert number into Binary number
+        String binaryNumber = Integer.toBinaryString(number);
+        System.out.println(" Convert Binary " + binaryNumber);
+
+        scanner.close();
+    }
+    public static void exe20(){
+        /*Write a Java program to convert a decimal number to a hexadecimal number.
+Input Data:
+Input a decimal number: 15
+Expected Output
+
+Hexadecimal number is : F
+
+         */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a Decimal number");
+        int number = scanner.nextInt();
+
+        //convert number into hexadecimal number
+        String hex = Integer.toHexString(number);
+        System.out.println(hex);
+
+        scanner.close();
+
     }
 }
