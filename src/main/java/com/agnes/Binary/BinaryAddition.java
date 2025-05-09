@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class BinaryAddition {
     public static void main(String[] args) {
-exe20();
+        exe22();
     }
 
     public static void exe17() {
@@ -69,6 +69,7 @@ Product of two binary numbers: 110
 
         scanner.close();
     }
+
     public static void exe19() {
         /*Write a Java program to convert an integer number to a binary number.
 Input Data:
@@ -88,7 +89,8 @@ Binary number is: 101
 
         scanner.close();
     }
-    public static void exe20(){
+
+    public static void exe20() {
         /*Write a Java program to convert a decimal number to a hexadecimal number.
 Input Data:
 Input a decimal number: 15
@@ -107,5 +109,44 @@ Hexadecimal number is : F
 
         scanner.close();
 
+    }
+
+    public static void exe21() {
+        /*Write a Java program to convert a decimal number to an octal number.
+Input Data:
+Input a Decimal Number: 15
+Expected Output
+
+Octal number is: 17
+
+         */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a decimal number");
+        int decimal = scanner.nextInt();
+
+        //convert number to octal
+        String octal = Integer.toOctalString(decimal);
+        System.out.println("Converted number :" + octal);
+
+        scanner.close();
+    }
+    public static  void exe22() {
+        /*Write a Java program to convert a binary number to a decimal number.
+Input Data:
+Input a binary number: 100
+Expected Output
+
+Decimal Number: 4
+
+         */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println( "Enter a binary Number");
+        String binary = scanner.next();
+
+        //convert number into a decimal
+        int decimal = Integer.parseInt(binary,2);
+        System.out.println("Converted number " + decimal);
+
+        scanner.close();
     }
 }
