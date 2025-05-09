@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class BinaryAddition {
     public static void main(String[] args) {
-        exe28();
+        exe30();
     }
 
     public static void exe17() {
@@ -266,10 +266,52 @@ Click me to see the solution
          */
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a hexadecimal value");
-        String hexa = scanner.next();
+        String hex = scanner.next();
 
-        int decimal = Integer.parseInt(hexa, 16);
+        int decimal = Integer.parseInt(hex, 16);
         System.out.println(decimal);
+
+        scanner.close();
+    }
+    public  static void exe29(){
+        /*Write a Java program to convert a hexadecimal number into a binary number.
+Input Data:
+Enter Hexadecimal Number : 37
+Expected Output
+
+Equivalent Binary Number is: 110111
+         */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a hexadecimal value");
+        String hex = scanner.next();
+
+        //convert into integer
+        int number = Integer.parseInt(hex, 16);
+
+        //convert integer into binary
+        String binary = Integer.toBinaryString(number);
+        System.out.println("Binary Value " + binary);
+
+        scanner.close();
+    }
+    public  static void exe30() {
+        /*Write a Java program to convert a hexadecimal value into an octal number.
+Input Data:
+Input a hexadecimal number: 40
+Expected Output
+
+Equivalent of octal number is: 100
+         */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a hexadecimal value");
+        String hex = scanner.next();
+
+        //convert hex into integer
+        int number = Integer.parseInt(hex, 16);
+
+        //convert integer into octal
+        String octal = Integer.toOctalString(number);
+        System.out.println("Octal value " + octal);
 
         scanner.close();
     }
