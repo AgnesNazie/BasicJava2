@@ -8,7 +8,7 @@ import static java.lang.Math.tan;
 
 public class BinaryAddition {
     public static void main(String[] args) {
-        exe34();
+        exe36();
     }
 
     public static void exe17() {
@@ -418,5 +418,66 @@ The area of the hexagon is: 93.53074360871938
 
         System.out.println(hexArea);
 
+        scanner.close();
+
     }
+
+    public static void exe35() {
+        /*Write a Java program to compute the area of a polygon.
+Area of a polygon = (n*s^2)/(4*tan(π/n))
+where n is n-sided polygon and s is the length of a side
+Input Data:
+Input the number of sides on the polygon: 7
+Input the length of one of the sides: 6
+Expected Output
+
+The area is: 130.82084798405722
+         */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the n sides of a polygon");
+        double nSides = scanner.nextDouble();
+
+        System.out.println("Enter the length of a polygon");
+        double length = scanner.nextDouble();
+
+        double area = (nSides * Math.pow(length, 2)) / (4 * Math.tan(Math.PI / nSides));
+        System.out.println("Polygon area :" + area);
+
+        scanner.close();
+    }
+    public static void exe36() {
+        /*Write a Java program to compute the distance between two points on the earth's surface.
+Distance between the two points [ (x1,y1) & (x2,y2)]
+d = radius * arccos(sin(x1) * sin(x2) + cos(x1) * cos(x2) * cos(y1 - y2))
+Radius of the earth r = 6371.01 Kilometers
+Input Data:
+Input the latitude of coordinate 1: 25
+Input the longitude of coordinate 1: 35
+Input the latitude of coordinate 2: 35.5
+Input the longitude of coordinate 2: 25.5
+Expected Output
+
+The distance between those points is: 1480.0848451069087 km
+         */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the latitude of coordinate");
+        double latitude = Math.toRadians(scanner.nextDouble());
+
+        System.out.println("Enter the longitude of coordinate");
+        double longitude = Math.toRadians(scanner.nextDouble());
+
+        System.out.println("Enter the latitude 2 of coordinate");
+        double latitude2 = Math.toRadians(scanner.nextDouble());
+
+        System.out.println("Enter the longitude 2 of coordinate");
+        double longitude2 = Math.toRadians(scanner.nextDouble());
+
+        double radius = 6371.01;
+        double distance = radius * Math.acos(Math.sin(latitude) * Math.sin(latitude2) + Math.cos(latitude) * Math.cos(latitude2) * Math.cos(longitude - longitude2));
+
+        System.out.println("Distance between the points are " + distance);
+
+        scanner.close();
+    }
+
 }
