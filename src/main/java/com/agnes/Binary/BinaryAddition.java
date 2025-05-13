@@ -8,7 +8,7 @@ import static java.lang.Math.tan;
 
 public class BinaryAddition {
     public static void main(String[] args) {
-        exe36();
+        exe37();
     }
 
     public static void exe17() {
@@ -445,6 +445,7 @@ The area is: 130.82084798405722
 
         scanner.close();
     }
+
     public static void exe36() {
         /*Write a Java program to compute the distance between two points on the earth's surface.
 Distance between the two points [ (x1,y1) & (x2,y2)]
@@ -478,6 +479,22 @@ The distance between those points is: 1480.0848451069087 km
         System.out.println("Distance between the points are " + distance);
 
         scanner.close();
+    }
+
+    public static void exe37() {
+        /*Write a Java program to reverse a string.
+Input Data:
+Input a string: The quick brown fox
+Expected Output
+
+Reverse string: xof nworb kciuq ehT
+         */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter a sentence ");
+        String original = scanner.nextLine();
+
+        String reversed = new StringBuilder(original).reverse().toString();
+        System.out.println(reversed);
     }
 
 }
